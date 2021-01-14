@@ -2,9 +2,67 @@
 
 <br>
 
-![TelegramBot ProFile](./Image/PrediCtionMoneyBotProFile.jpg)
+__Telegram 다운로드__
 
-__태그 : @PrediCtionMoneyBot__
+[Telegram Donwload Link](https://desktop.telegram.org/)
+
+<br>
+
+#### 1. 실행한 다음 BotFather봇을 친추한 다음
+
+![BotFather](./Image/telegram_BotFather.jpg)
+
+<br>
+
+#### 2. @BotFather이라고 태그 되어있는 봇을 클릭한 후
+하단 우측 START 버튼 클릭
+
+![BotFather Start](./Image/BotFaterStart.jpg)
+
+<br>
+
+#### 3. 채팅 창에 /newbot 입력
+
+![BotFather newbot](./Image/BotFater_newbot.jpg)
+
+<br>
+
+#### 4. 자신이 원하는 봇의 이름 입력
+
+![BofFather kimtelegram](./Image/BotFater_kimtelegram.jpg)
+
+<br>
+
+#### 5. 친추를 위한 봇 태그 입력
+
+![BofFather Kimtelegram Bot Create](./Image/BotFater_kimtelegramCreate.jpg)
+
+* __\<token\> 부분에 나오는것은 새로 생성된 봇의 토큰이다.__
+
+<br><br>
+
+* * *
+
+<br>
+
+### 해당 TelegramBot 파일 기본 설정
+
++ ##### Token , Telegram Bot Name
+
+![Telegram Bot](./Image/TelegramBotSetting.jpg)
+
+\<Token> =  새로 생성했던 봇의 토큰
+\<You Telegram Bot Name> = 새로 생성했던 봇의 네임
+
++ ##### BotStartCommand Variable
+
+![Telegram B ot Command Add](./Image/TelegramBotCommandDictAdd.jpg)
+
+BotStartComand = 텔레그램봇의 커멘드 추가용 변수
+
+<br><br>
+
+* * *
 
 <br>
 
