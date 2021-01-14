@@ -17,6 +17,8 @@ __Telegram 다운로드__
 #### 2. @BotFather이라고 태그 되어있는 봇을 클릭한 후
 하단 우측 START 버튼 클릭
 
+<br>
+
 ![BotFather Start](./Image/BotFaterStart.jpg)
 
 <br>
@@ -47,6 +49,8 @@ __Telegram 다운로드__
 
 ### 해당 TelegramBot 파일 기본 설정
 
+<br>
+
 + ##### Token , Telegram Bot Name
 
 ![Telegram Bot](./Image/TelegramBotSetting.jpg)
@@ -68,6 +72,8 @@ BotStartComand = 텔레그램봇의 커멘드 추가용 변수
 <br>
 
 ### 1. 텔레그램 봇 반응 커멘드 추가
+
+<br>
 
 텔레그램 봇이 /start 같은 커멘드에 반응하기 위해선
 ./Telegram_CommandList.py 파일의 BotStartCommand 변수를 추가하면 됩니다.
@@ -97,6 +103,8 @@ TelegramBot.bot_start()
 <br>
 
 ### 2. 텔레그램 봇 반응시 함수 실행
+
+<br>
 
 텔레그램 봇을 실행하는 도중 특정 커맨드를 입력하면 함수를 실행시키기 위해
 
