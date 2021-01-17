@@ -27,14 +27,22 @@ class TelegramBot_Run:
             CommandAdd = CommandHandler(TelegramCommand, (lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=TelegramSendText)))
             MessageRecvUpdate.add_handler(CommandAdd)
 
-    def FunctionCmd_Add(self, Cmd, ObjectClass) -> None:
+    def FunctionCmd_Add(self, Cmd, ObjectClass, args = (), kwargs = None) -> None:
         """
         TelegramBot.FunctionCmd_Add(<Command>, <Function or Class Name>)
         """
         global MessageRecvUpdate
 
-        CommandAdd = CommandHandler(Cmd, (lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=ObjectClass())))
-        MessageRecvUpdate.add_handler(CommandAdd)
+        kwargs = kwargs = {} if kwargs is None else kwargs
+
+        try:
+            _lambda = ((lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=ObjectClass(args, **kwargs)))\
+                if type(args) is str else\
+                    (lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=ObjectClass(*args, **kwargs))))
+            CommandAdd = CommandHandler(Cmd, _lambda)
+            MessageRecvUpdate.add_handler(CommandAdd)
+        except:
+            del ObjectClass, args, kwargs
         
     def bot_start(self) -> bool:
         """

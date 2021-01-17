@@ -13,6 +13,15 @@ def test():
 
 TelegramBot.FunctionCmd_Add('help', test)
 TelegramBot.bot_start()"""
+"""import BotStart
+
+TelegramBot = BotStart.TelegramBot_Run()
+
+def test(url):
+    return __import__("requests").get(url).text[:400]
+
+TelegramBot.FunctionCmd_Add('help', test, args=('https://www.naver.com'))
+TelegramBot.bot_start()"""
 """def test():
     print('hello')
 
