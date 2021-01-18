@@ -2,6 +2,12 @@
 
 <br>
 
+```bash
+pip install python-telegram-bot
+```
+
+<br>
+
 __Telegram 다운로드__
 
 [Telegram Donwload Link](https://desktop.telegram.org/)
