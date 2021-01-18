@@ -29,12 +29,35 @@ a = BotStart.TimeStartBotSend()
 a._Runh(test)
 a.TimeStart()"""
 
-import BotStart
+"""import TelegramBot as TelegramBot_
 
-TelegramBot = BotStart.TelegramBot_Run()
+TelegramBot = TelegramBot_.TelegramBot_Run()
 
 def request(url):
-    return __import__("requests").get(url).text
+    return url
 
-TelegramBot.FunctionCmd_Add('ab',request, args = ('https://www.google.com'))
+def msg(msga):
+    print("ab : ",msga)
+
+TelegramBot.FuncCmd_Add('ab',request, args = ('https://www.google.com'), _FuncFind = msg)
 TelegramBot.bot_start()
+"""
+
+"""from telegram.ext import Updater
+from telegram.ext import CommandHandler
+
+BotToken = __import__("__setting__").__BotTelegramToken__
+
+updater = Updater(token=BotToken, use_context=True)
+dispatecher = updater.dispatcher
+
+def start(update, context):
+    print(context.args)
+    context.bot.send_message(chat_id = update.effective_chat.id, text="hello")
+
+start_handler =CommandHandler('start',start)
+
+dispatecher.add_handler(start_handler)
+
+updater.start_polling()
+updater.idle()"""
