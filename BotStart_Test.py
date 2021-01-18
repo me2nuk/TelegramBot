@@ -28,3 +28,13 @@ TelegramBot.bot_start()"""
 a = BotStart.TimeStartBotSend()
 a._Runh(test)
 a.TimeStart()"""
+
+import BotStart
+
+TelegramBot = BotStart.TelegramBot_Run()
+
+def request(url):
+    return __import__("requests").get(url).text
+
+TelegramBot.FunctionCmd_Add('ab',request, args = ('https://www.google.com'))
+TelegramBot.bot_start()

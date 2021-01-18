@@ -34,10 +34,10 @@ class TelegramBot_Run:
         global MessageRecvUpdate
 
         kwargs = kwargs = {} if kwargs is None else kwargs
-
+        Check_List = [str, int, bool, float, tuple, list, dict]
         try:
             _lambda = ((lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=ObjectClass(args, **kwargs)))\
-                if type(args) is str else\
+                if type(args) in Check_List else\
                     (lambda Telegram_UpdateChat_id, NetxSend_MessAge: NetxSend_MessAge.bot.send_message(chat_id=Telegram_UpdateChat_id.effective_chat.id, text=ObjectClass(*args, **kwargs))))
             CommandAdd = CommandHandler(Cmd, _lambda)
             MessageRecvUpdate.add_handler(CommandAdd)

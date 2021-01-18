@@ -121,6 +121,20 @@ TelegramBot.FunctionCmd_Add('help', test)
 TelegramBot.bot_start()
 ```
 
+<br>
+
+```py
+import BotStart
+
+TelegramBot = BotStart.TelegramBot_Run()
+
+def test(a,b):
+    return (a,b)
+
+TelegramBot.FunctionCmd_Add('ab',test, args = (1,2))
+TelegramBot.bot_start()
+```
+
 * * *
 
 <br>
